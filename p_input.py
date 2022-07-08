@@ -20,5 +20,7 @@ def confirm(answer):
         confirm = True
     else:
         if testlong != 2:
+            outputtext.error("01")
+        if testcorrespond
             
     return confirm
