@@ -9,6 +9,9 @@ def gridini():
 def who(player):
     if player == 0:
        playerturn()
+    else:
+        pass
+        #will be IA turn
 
 def playerturn():
     answer = outputtext.ask()
