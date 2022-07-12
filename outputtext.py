@@ -1,7 +1,8 @@
 #for all the text output needed for the game
 
 from random import *
-import p_input
+import pinput
+
 
 
 def coinflip(players):
@@ -11,14 +12,17 @@ def coinflip(players):
 
 def start(firstplayer):
     print('''to play when it's your turn, write "column, row"''')
-    p_input.gridini()
+    p_input = pinput.p_input()
     p_input.who(firstplayer)
 
 def ask():
-    return input("where do you want to play ?").split()
+    return input("where do you want to play ?").split(sep=",")
 
 def win(who):
-    pass
+    if who == 0:
+        print("wow you won, impressive i guessmy algorithm is not that good")
+    else:
+        print("the IA just won")
 
 def error(type):
     if type == "O1":
@@ -27,3 +31,9 @@ def error(type):
     if type == "02":
         print("you gave a value over 3, you know a tic tac toe is only 3 x 3")
 
+def show(grid):
+    print(grid[0][0] + "|" + grid[1][0] + "|" + grid[2][0] + """
+    """ + "-----" + """
+    """ + grid[0][1] + "|" + grid[1][1] + "|" + grid[2][1] + """
+    """ + "-----" + """
+    """ + grid[0][2] + "|" + grid[1][2] + "|" + grid[2][2])

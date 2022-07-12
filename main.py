@@ -1,7 +1,7 @@
 #main file
 import outputtext
 import gridobject
-import p_input
+import pinput
 
 player = nameP, numP = "the player", 0
 ia = nameI, numI = "the IA", 1
