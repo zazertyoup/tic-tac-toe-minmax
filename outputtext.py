@@ -16,11 +16,11 @@ def start(firstplayer):
     p_input.who(firstplayer)
 
 def ask():
-    return input("where do you want to play ?").split(sep=",")
+    return input("where do you want to play ?")
 
 def win(who):
     if who == 0:
-        print("wow you won, impressive i guessmy algorithm is not that good")
+        print("wow you won, impressive i guess my algorithm is not that good")
     else:
         print("the IA just won")
 
@@ -33,7 +33,7 @@ def error(type):
 
 def show(grid):
     print(grid[0][0] + "|" + grid[1][0] + "|" + grid[2][0] + """
-    """ + "-----" + """
-    """ + grid[0][1] + "|" + grid[1][1] + "|" + grid[2][1] + """
-    """ + "-----" + """
-    """ + grid[0][2] + "|" + grid[1][2] + "|" + grid[2][2])
+""" + "-----------" + """
+""" + grid[0][1] + "|" + grid[1][1] + "|" + grid[2][1] + """
+""" + "-----------" + """
+""" + grid[0][2] + "|" + grid[1][2] + "|" + grid[2][2])

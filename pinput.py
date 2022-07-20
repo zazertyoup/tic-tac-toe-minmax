@@ -28,18 +28,17 @@ class p_input:
         while True:
             answer = outputtext.ask()
             confirmation = self.confirm(answer)
-            if confirmation == True:
+            if confirmation:
                 self.grid.update(answer, 0)
                 break
             
 
-    def confirm(answer1, answer2):
+    def confirm(self, answer):
         confirm = False
-        answer = [answer1, answer2]
         pos = [1,2,3]
         testlong = 0
         testcorrespond = 0
-        for a in answer:
+        for a in answer.split(','):
             testlong = testlong + 1
             for b in pos:
                 if int(a) == b:
